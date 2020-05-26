@@ -144,6 +144,7 @@ export default class TextField extends PureComponent {
       update.error = error;
     }
     if (value !== state.text) {
+      return { error };
       update.text = value;
     }
     return update;
