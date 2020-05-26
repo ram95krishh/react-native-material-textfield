@@ -141,10 +141,10 @@ export default class TextField extends PureComponent {
     let update = {};
     /* Keep last received error in state */
     if (error && error !== state.error) {
+      return { error };
       update.error = error;
     }
     if (value !== state.text) {
-      return { error };
       update.text = value;
     }
     return update;
